@@ -1,32 +1,20 @@
-// args come in as a string, 
-// think about adding more args if necessary -- validate
 
-// sequelize model:create --name User --attributes "email:[type:string, unique:true, allowNull: false, {validate: { isEmail: true } }]"
-
-// sequelize model:create --name User --attributes email:[type:string,unique:true,allowNull: false] name:[type:string,required:true]
-
-// email: {
-//       type: DataTypes.STRING,
-//       allowNull: false,
-//       validate: { 
-//         isEmail: true
-//       }    
-//     }
-
-// parse(command) will take the attributes arrgument and turn it into an object of objects 
 
 (function() {
 
-    module.exports = parse;
+    'use strict';
 
-    function parse(command) {
-        // command = email:[type:string,unique:true,allowNull: false] name:[type:string,required:true]
+    module.exports = {
 
-        // find field
-        var copy = command.slice();
-        arr = copy.split(' ');
+    transformAttributes: function (flag) {
 
-        // [email:[type:string,unique:true,allowNull: false], name:[type:string,required:true]]
+        /*
+        new flag format:
+          - name:[type:string,required:true] email:[type:string,required:true]
+        */
+        var self = this;
+        var copy = flag.slice();
+        var arr = copy.split(' ');
         
         var stringObj = arr.map(function(str){
             var newStr = str.replace(/\[/g, '{');
@@ -34,34 +22,22 @@
             return newStr;
         });  
 
-        //[ 'name:{type:string,required:true}','email:{type:string,required:true,validate:{isEmail:true}}' ]
-
         var result = stringObj.reduce(function(prev, curr) {
-            var obj = objectify(curr);
+            var obj = self.objectifyString(curr);
             prev[obj[0]] = obj[1];
             return prev;
         }, {});
-
+        
         return result;
 
+      },
 
-        // [email:{type:string,unique:true,allowNull: false}, name:{type:string,required:true}]
-
-        // create key value pairs inside an obj 
-        // set obj to field
-        // repeat
-        // return object with all fields and their attributes 
-
-
-    }
-
-    // str = 'name:{type:string,required:true}'
-    function objectify(str) {
-        
+    objectifyString: function(str) {
+            
         // grab field name
         var splitPoint = str.indexOf(':');
         var field = str.slice(0, splitPoint);
-        
+
         // grab attributes as string
         var start = str.indexOf('{');
         var end = str.indexOf('}');
@@ -79,23 +55,24 @@
             return prev;
         }, {});
         // create final pair, [field, { attributes, ...}] 
-        convertToType(attrObj);
+        this.convertValueToType(attrObj);
         return [field, attrObj];
 
-    };
+        },
 
-    function convertToType(obj) {
-        for(key in obj) {
-            
-            var copy = obj[key];
-            if (copy === 'true' || copy === 'false') {
-                obj[key] = Boolean(copy);
-            }            
-            else if (parseInt(copy)) {
-                obj[key] = parseInt(copy);
-            }
-        };
+    convertValueToType: function(obj) {
+        for(var key in obj) {
+              
+          var copy = obj[key];
+          if (copy === 'true' || copy === 'false') {
+              obj[key] = Boolean(copy);
+          }            
+          else if (parseInt(copy)) {
+              obj[key] = parseInt(copy);
+          }
+        }
         return obj;
+        },
     };
 
-})();
+        })();
