@@ -27,7 +27,6 @@
             prev[obj[0]] = obj[1];
             return prev;
         }, {});
-        
         return result;
 
       },
