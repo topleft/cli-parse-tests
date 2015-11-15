@@ -1,0 +1,150 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'passport-facebook',
+1 verbose cli   'passsport-google' ]
+2 info using npm@2.12.1
+3 info using node@v0.12.6
+4 verbose node symlink /usr/local/bin/node
+5 verbose config Skipping project config: /Users/petej/.npmrc. (matches userconfig)
+6 verbose install initial load of /Users/petej/package.json
+7 verbose installManyTop reading scoped package data from /Users/petej/node_modules/babel-cli/package.json
+8 verbose installManyTop reading scoped package data from /Users/petej/node_modules/babel-preset-es2015/package.json
+9 verbose installManyTop reading scoped package data from /Users/petej/node_modules/bootstrap/package.json
+10 verbose installManyTop reading scoped package data from /Users/petej/node_modules/jasmine/package.json
+11 verbose installManyTop reading scoped package data from /Users/petej/node_modules/jasmine-node/package.json
+12 verbose installManyTop reading scoped package data from /Users/petej/node_modules/mdi/package.json
+13 verbose installManyTop reading scoped package data from /Users/petej/node_modules/request/package.json
+14 info package.json jasmine-node@1.14.5 No license field.
+15 info package.json mdi@1.2.65 No license field.
+16 verbose readDependencies loading dependencies from /Users/petej/package.json
+17 silly cache add args [ 'passport-facebook', null ]
+18 verbose cache add spec passport-facebook
+19 silly cache add args [ 'passsport-google', null ]
+20 verbose cache add spec passsport-google
+21 silly cache add parsed spec { raw: 'passport-facebook',
+21 silly cache add   scope: null,
+21 silly cache add   name: 'passport-facebook',
+21 silly cache add   rawSpec: '',
+21 silly cache add   spec: '*',
+21 silly cache add   type: 'range' }
+22 silly addNamed passport-facebook@*
+23 verbose addNamed "*" is a valid semver range for passport-facebook
+24 silly addNameRange { name: 'passport-facebook', range: '*', hasData: false }
+25 silly mapToRegistry name passport-facebook
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry uri https://registry.npmjs.org/passport-facebook
+29 verbose addNameRange registry:https://registry.npmjs.org/passport-facebook not in flight; fetching
+30 silly cache add parsed spec { raw: 'passsport-google',
+30 silly cache add   scope: null,
+30 silly cache add   name: 'passsport-google',
+30 silly cache add   rawSpec: '',
+30 silly cache add   spec: '*',
+30 silly cache add   type: 'range' }
+31 silly addNamed passsport-google@*
+32 verbose addNamed "*" is a valid semver range for passsport-google
+33 silly addNameRange { name: 'passsport-google', range: '*', hasData: false }
+34 silly mapToRegistry name passsport-google
+35 silly mapToRegistry using default registry
+36 silly mapToRegistry registry https://registry.npmjs.org/
+37 silly mapToRegistry uri https://registry.npmjs.org/passsport-google
+38 verbose addNameRange registry:https://registry.npmjs.org/passsport-google not in flight; fetching
+39 verbose request uri https://registry.npmjs.org/passsport-google
+40 verbose request no auth needed
+41 info attempt registry request try #1 at 14:25:14
+42 verbose request id 7013170e3febcab4
+43 http request GET https://registry.npmjs.org/passsport-google
+44 verbose request uri https://registry.npmjs.org/passport-facebook
+45 verbose request no auth needed
+46 info attempt registry request try #1 at 14:25:14
+47 verbose etag "2TZ6MPGGIQXI874YHFF3IA6PP"
+48 http request GET https://registry.npmjs.org/passport-facebook
+49 http 304 https://registry.npmjs.org/passport-facebook
+50 silly get cb [ 304,
+50 silly get   { date: 'Sun, 15 Nov 2015 21:25:20 GMT',
+50 silly get     via: '1.1 varnish',
+50 silly get     'cache-control': 'max-age=60',
+50 silly get     etag: '"2TZ6MPGGIQXI874YHFF3IA6PP"',
+50 silly get     age: '0',
+50 silly get     connection: 'keep-alive',
+50 silly get     'x-served-by': 'cache-lax1421-LAX',
+50 silly get     'x-cache': 'MISS',
+50 silly get     'x-cache-hits': '0',
+50 silly get     'x-timer': 'S1447622720.154340,VS0,VE46',
+50 silly get     vary: 'Accept' } ]
+51 verbose etag https://registry.npmjs.org/passport-facebook from cache
+52 verbose get saving passport-facebook to /Users/petej/.npm/registry.npmjs.org/passport-facebook/.cache.json
+53 silly addNameRange number 2 { name: 'passport-facebook', range: '*', hasData: true }
+54 silly addNameRange versions [ 'passport-facebook',
+54 silly addNameRange   [ '0.1.0',
+54 silly addNameRange     '0.1.1',
+54 silly addNameRange     '0.1.2',
+54 silly addNameRange     '0.1.3',
+54 silly addNameRange     '0.1.4',
+54 silly addNameRange     '0.1.5',
+54 silly addNameRange     '0.1.6',
+54 silly addNameRange     '1.0.0',
+54 silly addNameRange     '1.0.1',
+54 silly addNameRange     '1.0.2',
+54 silly addNameRange     '1.0.3',
+54 silly addNameRange     '2.0.0' ] ]
+55 silly addNamed passport-facebook@2.0.0
+56 verbose addNamed "2.0.0" is a plain semver version for passport-facebook
+57 silly cache afterAdd passport-facebook@2.0.0
+58 verbose afterAdd /Users/petej/.npm/passport-facebook/2.0.0/package/package.json not in flight; writing
+59 verbose afterAdd /Users/petej/.npm/passport-facebook/2.0.0/package/package.json written
+60 http 404 https://registry.npmjs.org/passsport-google
+61 verbose headers { 'content-type': 'application/json',
+61 verbose headers   'cache-control': 'max-age=0',
+61 verbose headers   'content-length': '2',
+61 verbose headers   'accept-ranges': 'bytes',
+61 verbose headers   date: 'Sun, 15 Nov 2015 21:25:20 GMT',
+61 verbose headers   via: '1.1 varnish',
+61 verbose headers   age: '0',
+61 verbose headers   connection: 'keep-alive',
+61 verbose headers   'x-served-by': 'cache-lax1431-LAX',
+61 verbose headers   'x-cache': 'MISS',
+61 verbose headers   'x-cache-hits': '0',
+61 verbose headers   'x-timer': 'S1447622720.149569,VS0,VE84' }
+62 silly get cb [ 404,
+62 silly get   { 'content-type': 'application/json',
+62 silly get     'cache-control': 'max-age=0',
+62 silly get     'content-length': '2',
+62 silly get     'accept-ranges': 'bytes',
+62 silly get     date: 'Sun, 15 Nov 2015 21:25:20 GMT',
+62 silly get     via: '1.1 varnish',
+62 silly get     age: '0',
+62 silly get     connection: 'keep-alive',
+62 silly get     'x-served-by': 'cache-lax1431-LAX',
+62 silly get     'x-cache': 'MISS',
+62 silly get     'x-cache-hits': '0',
+62 silly get     'x-timer': 'S1447622720.149569,VS0,VE84' } ]
+63 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/passsport-google
+63 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:239:14)
+63 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:170:14)
+63 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:197:22)
+63 verbose stack     at Request.emit (events.js:110:17)
+63 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1050:14)
+63 verbose stack     at Request.emit (events.js:129:20)
+63 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:996:12)
+63 verbose stack     at IncomingMessage.emit (events.js:129:20)
+63 verbose stack     at _stream_readable.js:908:16
+63 verbose stack     at process._tickCallback (node.js:355:11)
+64 verbose statusCode 404
+65 verbose pkgid passsport-google
+66 verbose cwd /Users/petej/Documents/g11/cli-parse
+67 error Darwin 14.5.0
+68 error argv "node" "/usr/local/bin/npm" "install" "passport-facebook" "passsport-google"
+69 error node v0.12.6
+70 error npm  v2.12.1
+71 error code E404
+72 error 404 Registry returned 404 for GET on https://registry.npmjs.org/passsport-google
+72 error 404
+72 error 404 'passsport-google' is not in the npm registry.
+72 error 404 You should bug the author to publish it (or use the name yourself!)
+72 error 404
+72 error 404 Note that you can also install from a
+72 error 404 tarball, folder, http url, or git url.
+73 verbose exit [ 1, true ]
