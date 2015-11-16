@@ -86,18 +86,17 @@
         },
 
     convertValueToType: function(obj) {
-        for(var key in obj) {
-              
-          var copy = obj[key];
-          if (copy === 'true' || copy === 'false') {
-              obj[key] = Boolean(copy);
-          }            
-          else if (parseInt(copy)) {
-              obj[key] = parseInt(copy);
-          }
+        return Object.keys(obj).forEach(function(attr) {
+            var value = obj[attr]; 
+            console.log(value)
+            if (value === 'true' || value === 'false') {
+            return obj[attr] = Boolean(value);
+            }            
+            else if (parseInt(value)) {
+            return obj[attr] = parseInt(value);
+            }
+        });
         }
-        return obj;
-        },
     };
 
         })();
